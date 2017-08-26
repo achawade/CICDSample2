@@ -8,7 +8,6 @@
     <modules>
         <!-- Add project modules -->
     	<module>HelloWorldCICD</module>
-    	<module>HelloWorldCICD2</module>
     	<module>HellowWorldCICDver2</module>
     </modules>
     <repositories>

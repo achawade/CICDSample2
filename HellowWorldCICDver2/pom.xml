@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>TestSampleCICDApp</groupId>
     <artifactId>HellowWorldCICDver2</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>4.0</version>
     <packaging>sar</packaging>
     
     <!--
@@ -18,15 +18,16 @@
            for properties like serverUrl, etc. to the SOA common parent POM, so that you
            do not have to specify them over and over in every project POM.
     --> 
-    <parent>
+     <parent>
         <groupId>com.oracle.soa</groupId>
         <artifactId>sar-common</artifactId>
         <version>12.1.3-0-0</version>
     </parent>
     
+    
     <properties>
         <!-- These parameters are used by the compile goal -->
-        <scac.input.dir>${project.basedir}\SOA/</scac.input.dir>
+        <scac.input.dir>${project.basedir}/SOA/</scac.input.dir>
         <scac.output.dir>${project.basedir}/target</scac.output.dir>
         <scac.input>${scac.input.dir}/composite.xml</scac.input>
         <scac.output>${scac.output.dir}/out.xml</scac.output>
@@ -34,7 +35,7 @@
         <scac.displayLevel>1</scac.displayLevel>
         <!-- if you are using a config plan, uncomment the following line and update to point
              to your config plan -->
-        <!--<configplan>${scac.input.dir}/configplan.xml</configplan>-->
+        <configplan>${scac.input.dir}/configplan.xml</configplan>
         
         <!-- These parameters are used by the deploy and undeploy goals --> 
         <composite.name>${project.artifactId}</composite.name>
@@ -60,7 +61,6 @@
         <!--<scac.ant.buildfile>${env.MW_HOME}/soa/bin/ant-sca-compile.xml</scac.ant.buildfile>
         <sca.ant.testfile>${env.MW_HOME}/soa/bin/ant-sca-test.xml</sca.ant.testfile>
         -->
-        
     </properties>
     <build>
         <plugins>
@@ -71,13 +71,15 @@
                 <configuration>
                     <compositeName>${project.artifactId}</compositeName>
                     <composite>${scac.input}</composite>
-                    <sarLocation>${scac.output.dir}/sca_${project.artifactId}_rev${composite.revision}.jar</sarLocation>
+                    <sarLocation>sca_${project.artifactId}-${project.version}.jar</sarLocation>
                     <serverUrl>${serverUrl}</serverUrl>
                     <user>${user}</user>
                     <password>${password}</password>
                     <!-- Note: compositeRevision is needed to package, revision is needed to undeploy -->
+					<configplan>conf_${project.artifactId}-${project.version}.xml</configplan>
                     <compositeRevision>${composite.revision}</compositeRevision>
                     <revision>${composite.revision}</revision>
+					<appHome>${project.basedir}/..</appHome>
                     <scacInputDir>${scac.input.dir}</scacInputDir>                    
                     <input>${input}</input> 
                 </configuration>
@@ -86,4 +88,32 @@
             </plugin>
         </plugins>
     </build>
+	<repositories>
+    <repository>
+      <id>thirdparty</id>
+      <name></name>
+      <url>http://localhost:8081/nexus/content/repositories/thirdparty/</url>
+      <releases>
+        <checksumPolicy>ignore</checksumPolicy>
+      </releases>
+      <snapshots>
+        <checksumPolicy>ignore</checksumPolicy>
+      </snapshots>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>thirdparty</id>
+      <name></name>
+      <url>http://localhost:8081/nexus/content/repositories/thirdparty/</url>
+      <releases>
+        <checksumPolicy>ignore</checksumPolicy>
+      </releases>
+      <snapshots>
+        <checksumPolicy>ignore</checksumPolicy>
+      </snapshots>
+      <layout>default</layout>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
