@@ -24,5 +24,6 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="HelloWorldCICD/HelloWorldCICD.jpr"/></hash>
+      <hash><url n="URL" path="HellowWorldCICDver2/HellowWorldCICDver2.jpr"/></hash>
    </list>
 </jws:workspace>

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='oramds:/apps/CICD_HelloWorld/HelloWorldCICD2_BPEL.wsdl']</loc>
+      <line>15</line>
+      <col>96</col>
+      <file>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</file>
+      <name>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "oramds:/apps/CICD_HelloWorld/HelloWorldCICD2_BPEL.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:service[@name='helloworldcicd2_bpel_client_ep']</loc>
+      <line>17</line>
+      <col>85</col>
+      <file>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</file>
+      <name>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/TestSampleCICDApp/HelloWorldCICD2/HelloWorldCICD2_BPEL}HelloWorldCICD2_BPEL" for "helloworldcicd2_bpel_client_ep" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='HelloWorldCICD2_BPEL']</loc>
+      <line>23</line>
+      <col>56</col>
+      <file>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</file>
+      <name>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/TestSampleCICDApp/HelloWorldCICD2/HelloWorldCICD2_BPEL}HelloWorldCICD2_BPEL" for "helloworldcicd2_bpel_client" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>0</line>
+      <col/>
+      <file>BPEL/HelloWorldCICD2_BPEL.bpel</file>
+      <name>BPEL/HelloWorldCICD2_BPEL.bpel</name>
+      <fix>n/a</fix>
+      <msg>XML parsing failed because "Error in getting XML input stream: oramds:/apps/CICD_HelloWorld/HelloWorldCICD2_BPEL.wsdl: oracle.mds.exception.MDSException: MDS-00054: The file to be loaded oramds:/apps/CICD_HelloWorld/HelloWorldCICD2_BPEL.wsdl does not exist."</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='HelloWorldCICD2_BPEL/helloworldcicd2_bpel_client']</loc>
+      <line>35</line>
+      <col>17</col>
+      <file>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</file>
+      <name>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/TestSampleCICDApp/HelloWorldCICD2/HelloWorldCICD2_BPEL}HelloWorldCICD2_BPEL" for "helloworldcicd2_bpel_client_ep" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='HelloWorldCICD2_BPEL/helloworldcicd2_bpel_client']</loc>
+      <line>35</line>
+      <col>17</col>
+      <file>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</file>
+      <name>D:\JDeveloper\mywork\TestSampleCICDApp\HelloWorldCICD2\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/TestSampleCICDApp/HelloWorldCICD2/HelloWorldCICD2_BPEL}HelloWorldCICD2_BPEL" for "HelloWorldCICD2_BPEL" in WSDL Manager</msg>
+   </Fault>
+</Faults>

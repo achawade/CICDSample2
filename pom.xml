@@ -8,11 +8,13 @@
     <modules>
         <!-- Add project modules -->
     	<module>HelloWorldCICD</module>
+    	<module>HelloWorldCICD2</module>
+    	<module>HellowWorldCICDver2</module>
     </modules>
     <repositories>
     <repository>
       <id>thirdparty</id>
-      <name></name>
+      <name/>
       <url>http://localhost:8081/nexus/content/repositories/thirdparty/</url>
       <releases>
         <checksumPolicy>ignore</checksumPolicy>
@@ -26,7 +28,7 @@
   <pluginRepositories>
     <pluginRepository>
       <id>thirdparty</id>
-      <name></name>
+      <name/>
       <url>http://localhost:8081/nexus/content/repositories/thirdparty/</url>
       <releases>
         <checksumPolicy>ignore</checksumPolicy>
